@@ -1,0 +1,31 @@
+.idea/*
+target
+# macOS and editors
+.DS_Store
+.idea/
+.vscode/
+*.iml
+
+# Build output
+target/
+*.log
+
+# Python and Ansible
+.venv/
+venv/
+__pycache__/
+*.py[cod]
+*.retry
+.ansible/
+
+# Local credentials and environment files
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+id_rsa*
+id_ed25519*
+.aws/
+secrets/
+.vault-password*
