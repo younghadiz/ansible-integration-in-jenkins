@@ -1,0 +1,21 @@
+---
+plugin: amazon.aws.aws_ec2
+
+regions:
+  - ca-central-1
+
+filters:
+  instance-state-name: running
+  "tag:Project": ansible-integration-in-jenkins
+  "tag:Role": app
+
+hostnames:
+  - instance-id
+
+compose:
+  ansible_host: public_ip_address
+
+groups:
+  app_servers: "tags.get('Role', '') == 'app'"
+
+strict: true
