@@ -29,3 +29,7 @@ id_ed25519*
 .aws/
 secrets/
 .vault-password*
+
+.local/
+
+source-revision.txt

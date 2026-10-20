@@ -8,6 +8,7 @@ filters:
   instance-state-name: running
   "tag:Project": ansible-integration-in-jenkins
   "tag:Role": app
+  "tag:Deployment": capstone-v2
 
 hostnames:
   - public-ip-address
