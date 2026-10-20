@@ -8,14 +8,13 @@ filters:
   instance-state-name: running
   "tag:Project": ansible-integration-in-jenkins
   "tag:Role": app
+  "tag:Deployment": capstone-v2
 
 hostnames:
-  - instance-id
+  - public-ip-address
 
-compose:
-  ansible_host: public_ip_address
-
-groups:
-  app_servers: "tags.get('Role', '') == 'app'"
-
-strict: true
+keyed_groups:
+  - key: tags
+    prefix: tag
+  - key: instance_type
+    prefix: instance_type
